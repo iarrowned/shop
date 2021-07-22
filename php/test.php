@@ -12,5 +12,4 @@
     $shop->remove('Milk');
     print_r($shop->showInventory());
     print_r($shop->getTotalPrice());
-
     file_put_contents('log.json', $shop->getJSON());

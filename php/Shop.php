@@ -53,10 +53,12 @@ class Shop
                 $this->stack[$name]['total_price'] -= $this->stack[$name]['price'];
                 $this->stack[$name]['total_weight'] -= $this->stack[$name]['weight'];
                 $this->total_price -= $this->stack[$name]['price'];
+                $this->total_items--;
             }
             else
             {
                 $this->total_price -= $this->stack[$name]['quantity']*$this->stack[$name]['price'];
+                $this->total_items -= $this->stack[$name]['quantity'];
                 unset($this->stack[$name]);
             }
 
